@@ -1,17 +1,47 @@
+@import "../../globalStyles/theme";
 .header {
-    padding: 15px 36px;
+    padding: 12px 36px;
     display: flex;
+    gap: 10px;
     align-items: center;
     justify-content: space-between;
-
-
-    .search_input{
+    
+    @media (max-width : 992px) {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: $primary;
+        padding: 12px 24px;
+    }
+    @media (max-width : 320px) {
+        padding: 12px 14px;
+    }
+    .search_input {
         position: relative;
+        .search_icon {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            height: 16px;
+            width: 16px;
+            display: block;
+            background-color: $primary-text;
+            z-index: 1;
+            -webkit-mask: url("../../assets/icons/dashboard-icons/search.svg") no-repeat center;
+            mask-image: url("../../assets/icons/dashboard-icons/search.svg") no-repeat center;
+        }
+        .form_control {
+            padding: 12px 35px;
+            border-radius: 8rem;
+            border: none;
+            outline: none;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
     }
 
-    .humbergar{
+    .humbergar {
         background-color: transparent;
         border: none;
-        
     }
 }

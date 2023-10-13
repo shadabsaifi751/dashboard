@@ -3,36 +3,127 @@
         "_id": "1",
         "iconName": "Dashboard",
         "title": "Dashboard",
-        "route": "/"
+        "route": "/",
+        "subMenu": []
     },
     {
         "_id": "2",
         "iconName": "Product",
         "title": "Product",
-        "route": "/product"
+        "route": "/product",
+        "subMenu": [
+            {
+                "id": "1",
+                "subMenu": "Category"
+            },
+            {
+                "id": "2",
+                "subMenu": "Collection"
+            },
+            {
+                "id": "3",
+                "subMenu": "Service"
+            },
+            {
+                "id": "4",
+                "subMenu": "Category"
+            }
+        ]
     },
     {
         "_id": "3",
         "iconName": "Customers",
         "title": "Customers",
-        "route": "/customers"
+        "route": "/customers",
+        "subMenu": [
+            {
+                "id": "1",
+                "subMenu": "Category"
+            },
+            {
+                "id": "2",
+                "subMenu": "Collection"
+            },
+            {
+                "id": "3",
+                "subMenu": "Service"
+            },
+            {
+                "id": "4",
+                "subMenu": "Category"
+            }
+        ]
     },
     {
         "_id": "4",
         "iconName": "Income",
         "title": "Income",
-        "route": "/income"
+        "route": "/income",
+        "subMenu": [
+            {
+                "id": "1",
+                "subMenu": "Category"
+            },
+            {
+                "id": "2",
+                "subMenu": "Collection"
+            },
+            {
+                "id": "3",
+                "subMenu": "Service"
+            },
+            {
+                "id": "4",
+                "subMenu": "Category"
+            }
+        ]
     },
     {
         "_id": "5",
         "iconName": "Promote",
         "title": "Promote",
-        "route": "/promote"
+        "route": "/promote",
+        "subMenu": [
+            {
+                "id": "1",
+                "subMenu": "Category"
+            },
+            {
+                "id": "2",
+                "subMenu": "Collection"
+            },
+            {
+                "id": "3",
+                "subMenu": "Service"
+            },
+            {
+                "id": "4",
+                "subMenu": "Category"
+            }
+        ]
     },
     {
         "_id": "6",
         "iconName": "Help",
         "title": "Help",
-        "route": "/help"
+        "route": "/help",
+        "subMenu": [
+            {
+                "id": "1",
+                "subMenu": "Category"
+            },
+            {
+                "id": "2",
+                "subMenu": "Collection"
+            },
+            {
+                "id": "3",
+                "subMenu": "Service"
+            },
+            {
+                "id": "4",
+                "subMenu": "Category"
+            }
+        ]
     }
 ]

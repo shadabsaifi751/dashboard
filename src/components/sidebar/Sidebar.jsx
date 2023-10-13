@@ -14,17 +14,24 @@ const Sidebar = () => {
   const activePage = Menu.find((item) => item.route === location.pathname);
   const activePageId = activePage ? activePage.route : "";
   const [isActive, setIsActive] = useState(activePageId);
+  const [isExpent, setIsExpend] = useState(1);
 
-  const menuHandle = (val) => {
+  const menuHandle = (e,val) => {
+    e.stopPropagation();
     setIsActive(val);
+    setIsExpend(isExpent === val ? 1 : val);
     navigate(val);
   };
 
-  // console.log(activePage,"location")
+  console.log(isExpent, "location");
   const isMobile = window.width <= 992;
 
   return (
-    <aside className={`${styles.sidebar} ${isMobile && styles.isMobile} ${isOpen && styles.isOpen}`} >
+    <aside
+      className={`${styles.sidebar} ${isMobile && styles.isMobile} ${
+        isOpen && styles.isOpen
+      }`}
+    >
       <div className={styles.brand}>
         <Link to={"/"}>
           <i className={styles.brand_icon}></i> Dashboard
@@ -32,16 +39,33 @@ const Sidebar = () => {
       </div>
       <ul className={styles.menu_wrap}>
         {Menu.map((item, key) => (
-          <li
-            key={key}
-            className={`${styles.menu_list} ${
-              isActive === item.route && styles.active
-            }`}
-            onClick={() => menuHandle(item.route)}
-          >
-            <i className={styles[item.iconName]}></i>
-            <span>{item.title}</span>
-          </li>
+          <>
+            <li
+              key={key}
+              className={`${styles.menu_list} ${
+                isActive === item.route && styles.active
+              }`}
+              onClick={(e) => menuHandle(e,item.route)}
+            >
+              <span className={styles.MainMenu_Item}>
+                <i className={styles[item.iconName]}></i>
+                {item.title}
+              </span>
+              {item.subMenu.length > 0 && <i className={styles.arrowIcon}></i>}
+            </li>
+            {isExpent === item.route && item.subMenu.length > 0 ? (
+              <ul className={styles.subMenu}>
+                {item.subMenu.map((subItem, subKey) => (
+                  <Link to="#" key={subKey} className={styles.subList}>
+                    {" "}
+                    {subItem.subMenu}
+                  </Link>
+                ))}
+              </ul>
+            ) : (
+              ""
+            )}
+          </>
         ))}
       </ul>
     </aside>

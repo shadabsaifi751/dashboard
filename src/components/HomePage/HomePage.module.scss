@@ -1,0 +1,100 @@
+@import "../../globalStyles/theme";
+
+.home_wrapper {
+    padding: 10px 36px;
+
+    @media (max-width: 992px) {
+        padding: 12px 24px;
+    }
+    @media (max-width: 320px) {
+        padding: 12px 14px;
+    }
+
+    .cards_wrap {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        @media (max-width: 992px) {
+            gap: 28px;
+        }
+        @media (max-width: 580px) {
+            gap: 15px;
+        }
+
+        .card {
+            border-radius: 6px;
+            // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            display: flex;
+            flex-grow: 1;
+            gap: 10px;
+            padding: 15px 10px;
+            align-items: center;
+
+            .icon_wrap {
+                padding: 20px;
+                background-color: $success-light;
+                border-radius: 50%;
+
+                &.orders {
+                    background-color: $purple-light;
+                }
+                &.balance {
+                    background-color: $blue-light;
+                }
+                &.sales {
+                    background-color: $danger-light;
+                }
+                .earning,
+                .orders,
+                .balance,
+                .sales {
+                    display: block;
+                    cursor: pointer;
+                    height: 34px;
+                    width: 34px;
+                    background-color: $success;
+                    -webkit-mask: url("../../assets/icons/dashboard-icons/bank.svg") no-repeat center;
+                    mask-image: url("../../assets/icons/dashboard-icons/bank.svg") no-repeat center;
+                }
+                .orders {
+                    background-color: $purple;
+                    -webkit-mask: url("../../assets/icons/dashboard-icons/note.svg") no-repeat center;
+                    mask-image: url("../../assets/icons/dashboard-icons/note.svg") no-repeat center;
+                }
+                .balance {
+                    background-color: $blue;
+                    -webkit-mask: url("../../assets/icons/dashboard-icons/wallet.svg") no-repeat center;
+                    mask-image: url("../../assets/icons/dashboard-icons/wallet.svg") no-repeat center;
+                }
+                .sales {
+                    background-color: $danger;
+                    -webkit-mask: url("../../assets/icons/dashboard-icons/shopping-bag.svg") no-repeat center;
+                    mask-image: url("../../assets/icons/dashboard-icons/shopping-bag.svg") no-repeat center;
+                }
+            }
+            .card_body {
+                .title {
+                    font-size: 12px;
+                    color: $primary-text;
+                    margin-bottom: 4px;
+                }
+                .price {
+                    font-size: 18px;
+                    margin-bottom: 5px;                
+                }
+                .dicription {
+                    font-size: 12px;
+                    font-weight: 600;
+                    .lavel {
+                        color: $success;
+                    }
+                    .danger {
+                        color: $danger;
+                    }
+                }
+            }
+        }
+    }
+}

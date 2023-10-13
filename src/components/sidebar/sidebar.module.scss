@@ -56,17 +56,33 @@
         display: flex;
         gap: 10px;
         .menu_list {
-            font-size: 14px;
+            display: flex;
+            gap: 20px;
             padding: 12px;
-            color: $primary-text;
+            justify-content: space-between;
             border-radius: 4px;
             display: flex;
             width: 100%;
             align-items: center;
-            gap: 10px;
             transition: 0.3s linear;
             cursor: pointer;
 
+            .MainMenu_Item {
+                display: flex;
+                font-size: 14px;
+                gap: 10px;
+                color: $primary-text;
+                align-items: center;
+            }
+            .arrowIcon {
+                display: block;
+                height: 18px;
+                width: 18px;
+                cursor: pointer;
+                background-color: $primary-text;
+                -webkit-mask: url("../../assets/icons/dashboard-icons/angle-small-right.svg") no-repeat center;
+                mask-image: url("../../assets/icons/dashboard-icons/angle-small-right.svg") no-repeat center;
+            }
             &:hover,
             &.active {
                 background-color: $primary-light;
@@ -76,7 +92,8 @@
                 .Customers,
                 .Income,
                 .Promote,
-                .Help {
+                .Help,
+                .arrowIcon {
                     background-color: $white;
                 }
                 color: $white;
@@ -114,6 +131,21 @@
             .Help {
                 -webkit-mask: url("../../assets/icons/nav-icons/info.svg") no-repeat center;
                 mask-image: url("../../assets/icons/nav-icons/info.svg") no-repeat center;
+            }
+        }
+        .subMenu {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 8px 0;
+            padding-left: 40px;
+            .subList {
+                color: $primary-text;
+                font-size: 14px;
+                transition: 0.3s linear;
+                &:hover {
+                    color: $white;
+                }
             }
         }
     }

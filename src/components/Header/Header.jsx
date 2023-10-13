@@ -7,24 +7,30 @@ const Header = () => {
   const { isOpen, setIsOpen } = useContext(StoreContext);
   const windowSize = useWindowSize();
   const isMobile = windowSize.width <= 992;
+  const isDesktop = windowSize.width >= 992;
 
   const humburgerHandle = () => {
     setIsOpen(true);
   };
 
   return (
-    <div className={styles.header}>
-      <h2>Hello Shadab Saifi👋,</h2>
+    <header className={styles.header}>
+      {isDesktop && <h2>Hello, Shadab Saifi👋</h2>}
+      {windowSize.width >= 580 && <div></div>}
       <div className={styles.search_input}>
         <i className={styles.search_icon}></i>
-        <input type="text" placeholder="Search..." />
+        <input
+          type="text"
+          placeholder="Search..."
+          className={styles.form_control}
+        />
       </div>
       {isMobile && (
         <button onClick={() => humburgerHandle()} className={styles.humbergar}>
           <img src={Humbarger} />
         </button>
       )}
-    </div>
+    </header>
   );
 };
 
