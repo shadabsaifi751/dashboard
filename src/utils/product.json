@@ -1,0 +1,104 @@
+{
+    "products": [
+        {
+            "_id": "2",
+            "title": "Nature's Beauty",
+            "description": "A collection of stunning images showcasing the beauty of nature.",
+            "url": "https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGJhY2tncm91bmR8ZW58MHwwfDB8fHwy&auto=format&fit=crop&w=600&q=60",
+            "stoke": "50",
+            "price": "59.99",
+            "totalSale": "15",
+            "date": "13-10-2023"
+        },
+        {
+            "_id": "3",
+            "title": "Vintage Watches",
+            "description": "Explore a curated selection of vintage watches from different eras.",
+            "url": "https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGJhY2tncm91bmR8ZW58MHwwfDB8fHwy&auto=format&fit=crop&w=600&q=60",
+            "stoke": "10",
+            "price": "199.99",
+            "totalSale": "5",
+            "date": "13-10-2023"
+        },
+        {
+            "_id": "4",
+            "title": "Travel Essentials",
+            "description": "Find the perfect gear and accessories for your next adventure.",
+            "url": "https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGJhY2tncm91bmR8ZW58MHwwfDB8fHwy&auto=format&fit=crop&w=600&q=60",
+            "stoke": "25",
+            "price": "34.99",
+            "totalSale": "30",
+            "date": "13-10-2023"
+        },
+        {
+            "_id": "5",
+            "title": "Artistic Paintings",
+            "description": "Discover a collection of captivating artistic paintings by renowned artists.",
+            "url": "https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGJhY2tncm91bmR8ZW58MHwwfDB8fHwy&auto=format&fit=crop&w=600&q=60",
+            "stoke": "15",
+            "price": "149.99",
+            "totalSale": "8",
+            "date": "13-10-2023"
+        },
+        {
+            "_id": "6",
+            "title": "Tech Gadgets",
+            "description": "Browse the latest and coolest tech gadgets on the market.",
+            "url": "https://images.unsplash.com/photo-1510070009289-b5bc34383727?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGJhY2tncm91bmR8ZW58MHwwfDB8fHwy&auto=format&fit=crop&w=600&q=60",
+            "stoke": "40",
+            "price": "79.99",
+            "totalSale": "25",
+            "date": "13-10-2023"
+        },
+        {
+            "_id": "12",
+            "title": "Mountain Adventures",
+            "description": "Plan your next mountain adventure with these breathtaking destinations.",
+            "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdhbGxwYXBlciUyMGRhcmt8ZW58MHwwfDB8fHwy&auto=format&fit=crop&w=600&q=60",
+            "stoke": "12",
+            "price": "129.99",
+            "totalSale": "6",
+            "date": "13-10-2023"
+        },
+        {
+            "_id": "13",
+            "title": "Tropical Getaway",
+            "description": "Escape to paradise with these stunning tropical vacation spots.",
+            "url": "https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFja2dyb3VuZHxlbnwwfDB8MHx8fDI%3D&auto=format&fit=crop&w=600&q=60",
+            "stoke": "18",
+            "price": "199.99",
+            "totalSale": "10",
+            "date": "14-10-2023"
+        },
+        {
+            "_id": "14",
+            "title": "Home Decor Inspiration",
+            "description": "Transform your living space with these stylish home decor ideas.",
+            "url": "https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJhY2tncm91bmR8ZW58MHwwfDB8fHwy&auto=format&fit=crop&w=600&q=60",
+            "stoke": "28",
+            "price": "79.99",
+            "totalSale": "15",
+            "date": "15-10-2023"
+        },
+        {
+            "_id": "15",
+            "title": "Sustainable Living",
+            "description": "Discover eco-friendly products and tips for sustainable living.",
+            "url": "https://images.unsplash.com/photo-1530543787849-128d94430c6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJhY2tncm91bmR8ZW58MHwwfDB8fHwy&auto=format&fit=crop&w=600&q=60",
+            "stoke": "36",
+            "price": "49.99",
+            "totalSale": "20",
+            "date": "16-10-2023"
+        },
+        {
+            "_id": "16",
+            "title": "Classic Literature",
+            "description": "Explore timeless classics from the world of literature.",
+            "url": "https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJhY2tncm91bmR8ZW58MHwwfDB8fHwy&auto=format&fit=crop&w=600&q=60",
+            "stoke": "22",
+            "price": "14.99",
+            "totalSale": "8",
+            "date": "17-10-2023"
+        }
+    ]
+}

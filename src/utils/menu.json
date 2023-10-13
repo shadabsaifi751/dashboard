@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "1",
+        "iconName": "Dashboard",
+        "title": "Dashboard",
+        "route": "/"
+    },
+    {
+        "_id": "2",
+        "iconName": "Product",
+        "title": "Product",
+        "route": "/product"
+    },
+    {
+        "_id": "3",
+        "iconName": "Customers",
+        "title": "Customers",
+        "route": "/customers"
+    },
+    {
+        "_id": "4",
+        "iconName": "Income",
+        "title": "Income",
+        "route": "/income"
+    },
+    {
+        "_id": "5",
+        "iconName": "Promote",
+        "title": "Promote",
+        "route": "/promote"
+    },
+    {
+        "_id": "6",
+        "iconName": "Help",
+        "title": "Help",
+        "route": "/help"
+    }
+]

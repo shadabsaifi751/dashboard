@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap");
+
+@import "./theme";
+@import "./typo";
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: $primary $gray;
+}
+
+*::-webkit-scrollbar {
+    height: 10px;
+    /* height of horizontal scrollbar ← You're missing this */
+    width: 5px;
+    /* width of vertical scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+    background: $gray;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 0;
+    border: 0 solid $gray;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+video {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+i {
+    font-style: normal;
+}
+
+::selection {
+    background: $primary;
+    color: $white;
+}
+
+::-moz-selection {
+    background: $primary;
+    color: $white;
+}
+
+body {
+    background: $gray;
+    font-family: $font;
+    color: $black;
+    overflow-x: hidden;
+    letter-spacing: 0.0125em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+p {
+    overflow-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    line-height: 1.25;
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+$marginBottom: (
+    0: "0",
+    2: "2px",
+    3: "3px",
+    5: "8px",
+    10: "10px",
+    15: "15px",
+    20: "20px",
+    25: "25px",
+    30: "30px",
+    40: "40px",
+    50: "50px",
+    60: "60px",
+    80: "80px",
+    90: "90px",
+    100: "100px"
+);
+
+@each $key, $val in $marginBottom {
+    .mb-#{$key} {
+        margin-bottom: #{$val};
+    }
+}
+
+$marginTop: (
+    0: "0",
+    2: "2px",
+    3: "3px",
+    5: "8px",
+    10: "10px",
+    15: "15px",
+    20: "20px",
+    25: "25px",
+    30: "30px",
+    40: "40px",
+    50: "50px",
+    60: "60px",
+    80: "80px",
+    90: "90px",
+    100: "100px"
+);
+
+@each $key, $val in $marginTop {
+    .mt-#{$key} {
+        margin-top: #{$val};
+    }
+}

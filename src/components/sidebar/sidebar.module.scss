@@ -1,0 +1,142 @@
+@import "../../globalStyles/_theme.scss";
+
+.sidebar {
+    background-color: $primary;
+    width: 250px;
+    height: 100vh;
+
+    &.isMobile {
+        position: fixed;
+        height: 100vh;
+        display: block;
+        z-index: 101;
+        top: 0;
+        left: 0;
+        width: 230px;
+        transform: translate(-100%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        -webkit-transition: all 0.3s cubic-bezier(0.64, 0.19, 0.4, 0.81);
+        transition: all 0.3s cubic-bezier(0.64, 0.19, 0.4, 0.81);
+
+        &.isOpen {
+            transform: translate(0);
+        }
+
+        @media (max-width: 480px) {
+            width: calc(100vw - 100px);
+        }
+        @media (max-width: 320px) {
+            width: calc(100vw - 50px);
+        }
+    }
+    .brand {
+        color: $white;
+        padding: 26px 20px;
+        a {
+            color: $white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .brand_icon {
+                display: block;
+                height: 20px;
+                width: 20px;
+                cursor: pointer;
+                background-color: $white;
+                -webkit-mask: url("../../assets/icons/dashboard-icons/cube.svg") no-repeat center;
+                mask-image: url("../../assets/icons/dashboard-icons/cube.svg") no-repeat center;
+            }
+        }
+    }
+    .menu_wrap {
+        padding: 10px 18px;
+        flex-direction: column;
+        display: flex;
+        gap: 10px;
+        .menu_list {
+            font-size: 14px;
+            padding: 12px;
+            color: $primary-text;
+            border-radius: 4px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s linear;
+            cursor: pointer;
+
+            &:hover,
+            &.active {
+                background-color: $primary-light;
+
+                .Dashboard,
+                .Product,
+                .Customers,
+                .Income,
+                .Promote,
+                .Help {
+                    background-color: $white;
+                }
+                color: $white;
+            }
+            .Dashboard,
+            .Product,
+            .Customers,
+            .Income,
+            .Promote,
+            .Help {
+                display: block;
+                height: 20px;
+                width: 20px;
+                cursor: pointer;
+                background-color: $primary-text;
+                -webkit-mask: url("../../assets/icons/nav-icons/home.svg") no-repeat center;
+                mask-image: url("../../assets/icons/nav-icons/home.svg") no-repeat center;
+            }
+            .Product {
+                -webkit-mask: url("../../assets/icons/nav-icons/box-open.svg") no-repeat center;
+                mask-image: url("../../assets/icons/nav-icons/box-open.svg") no-repeat center;
+            }
+            .Customers {
+                -webkit-mask: url("../../assets/icons/nav-icons/portrait.svg") no-repeat center;
+                mask-image: url("../../assets/icons/nav-icons/portrait.svg") no-repeat center;
+            }
+            .Income {
+                -webkit-mask: url("../../assets/icons/nav-icons/donate.svg") no-repeat center;
+                mask-image: url("../../assets/icons/nav-icons/donate.svg") no-repeat center;
+            }
+            .Promote {
+                -webkit-mask: url("../../assets/icons/nav-icons/ticket.svg") no-repeat center;
+                mask-image: url("../../assets/icons/nav-icons/ticket.svg") no-repeat center;
+            }
+            .Help {
+                -webkit-mask: url("../../assets/icons/nav-icons/info.svg") no-repeat center;
+                mask-image: url("../../assets/icons/nav-icons/info.svg") no-repeat center;
+            }
+        }
+    }
+}
+
+.sidebarOverlay {
+    background: rgba($black, 0.4);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    -webkit-transition: all 0.3s cubic-bezier(0.64, 0.19, 0.4, 0.81);
+    transition: all 0.3s cubic-bezier(0.64, 0.19, 0.4, 0.81);
+    &.isOpen {
+        z-index: 99;
+        opacity: 1;
+        transform: translate(0);
+    }
+}

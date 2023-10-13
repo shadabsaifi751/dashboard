@@ -1,0 +1,39 @@
+@import "../../../globalStyles/theme";
+@import "../../../globalStyles/typo";
+
+.userList_wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    .user_item {
+        padding: 6px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8rem;
+        text-align: center;
+        color: $white;
+        font-family: $font;
+        font-size: 12px;
+        font-weight: 700;
+        background-color: $purple;
+        line-height: 15px;
+        border: 1px solid $white;
+        &:not(:first-child) {
+            margin-left: -15px;
+        }
+        &:nth-child(2) {
+            background-color: $secondary;
+        }
+    }
+    .total_count {
+        color: $primary;
+        text-align: center;
+        font-family: $font;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+    }
+}

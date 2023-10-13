@@ -1,0 +1,145 @@
+@import "../../globalStyles/theme";
+@import "../../globalStyles/typo";
+
+.input_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    .label {
+        color: $primary;
+        font-family: $font;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+
+    .form_control {
+        padding: 15px;
+        color: $primary;
+        font-family: $font;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 8px;
+        border: 1px solid $gray-light;
+        background: $white;
+        width: 100%;
+
+        &::-webkit-input-placeholder {
+            /* WebKit, Blink, Edge */
+            color: $primary;
+        }
+        &:-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            color: $primary;
+            opacity: 1;
+        }
+        &::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            color: $primary;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: $primary;
+        }
+        &::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: $primary;
+        }
+
+        &::placeholder {
+            /* Most modern browsers support this now. */
+            color: $primary;
+        }
+    }
+}
+
+.select_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    .label {
+        color: $primary;
+        font-family: $font;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    .form_select {
+        padding: 15px;
+        color: $primary;
+        font-family: $font;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 8px;
+        border: 1px solid $gray-light;
+        background: $white;
+    }
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background: #ddedff;
+    padding: 6px 8px 6px 10px;
+    color: $primary;
+    font-family: $font;
+    font-size: 12px;
+    font-weight: 500;
+    gap: 5px;
+    height: 30px;
+
+    .icon_close {
+
+        width: 18px;
+        height: 18px;
+        display: block;
+        cursor: pointer;
+        background-color: $primary;
+        -webkit-mask: url("../../assets/icons/dashboard-icons/icon-close.svg") no-repeat center;
+        mask-image: url("../../assets/icons/dashboard-icons/icon-close.svg") no-repeat center;
+        
+       
+    }
+}
+
+.chip_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    .label {
+        color: $primary;
+        font-family: $font;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    .chip_input {
+        border-radius: 8px 8px;
+        border: 1px solid $gray-light;
+        overflow: hidden;
+
+        .inputChip {
+            margin-bottom: 0;
+        }
+        .chip_container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 16px;
+            gap: 10px;
+            height: 105px;
+            overflow-y: auto;
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.header_layout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 100vh;
+    
+    @media (max-width:992px) {
+        grid-template-columns: 1fr;
+    }
+
+    // .main_wrapper{
+    //     padding: ;
+    // }
+}
+

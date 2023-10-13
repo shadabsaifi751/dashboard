@@ -1,0 +1,17 @@
+.header {
+    padding: 15px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .search_input{
+        position: relative;
+    }
+
+    .humbergar{
+        background-color: transparent;
+        border: none;
+        
+    }
+}
