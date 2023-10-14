@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./homePage.module.scss";
+import styles from "./homepage.module.scss";
 import data from "../../utils/overview.json";
 import useWindowSize from "../../common/windowResize";
 import BarChart from "./Chart/BarChart";
