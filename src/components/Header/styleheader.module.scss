@@ -39,6 +39,9 @@
             border: none;
             outline: none;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            @media (max-width: 480px) {
+                padding: 12px 0 12px 32px;
+            }
         }
     }
 

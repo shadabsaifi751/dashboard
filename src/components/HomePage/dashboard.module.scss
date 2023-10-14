@@ -5,10 +5,10 @@
 
     @media (max-width: 992px) {
         padding: 12px 24px;
-    };
+    }
     @media (max-width: 320px) {
         padding: 12px 14px;
-    };
+    }
 
     .cards_wrap {
         display: flex;
@@ -19,8 +19,10 @@
         @media (max-width: 992px) {
             gap: 28px;
         }
-        @media (max-width: 580px) {
+        @media (max-width: 768px) {
             gap: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
 
         .card {
@@ -32,6 +34,12 @@
             gap: 10px;
             padding: 15px 10px;
             align-items: center;
+
+            @media (max-width: 580px) {
+                gap: 15px;
+                flex-direction: column;
+                text-align: center;
+            }
 
             .icon_wrap {
                 padding: 20px;
@@ -83,7 +91,7 @@
                 }
                 .price {
                     font-size: 16px;
-                    margin-bottom: 2px;                
+                    margin-bottom: 2px;
                 }
                 .dicription {
                     font-size: 11px;
@@ -99,7 +107,7 @@
         }
     }
 
-    .chart_wrapper{
+    .chart_wrapper {
         display: grid;
         grid-template-columns: 1fr 300px;
         height: 100%;
