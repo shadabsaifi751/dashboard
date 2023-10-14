@@ -1,9 +1,9 @@
-import React, { createContext, useEffect, useRef, useState } from "react";
+import React, { createContext, useRef, useState } from "react";
 import styles from "./main.module.scss";
 import useWindowSize from "../../common/windowResize";
 import Main from "../Main/Main";
-import Asidebar from "../sidebar";
-import { useDetectOutsideClick } from "../../common/useOutsideClick/useDetectOutsideClick";
+import SidebarNav from "../Sidebar/SidebarNav";
+import MobileNavigation from "../Sidebar/MobileNavigation";
 // import MobileSidebar from '../sidebar/MobileSidebar';
 
 export const StoreContext = createContext(null);
@@ -20,12 +20,11 @@ const Layout = () => {
       value={{
         isOpen,
         setIsOpen,
-        sidebarRef
+        sidebarRef,
       }}
     >
-      <div id="portal-root"></div>
       <div className={styles.header_layout}>
-        <Asidebar />
+        {windowSize.width > 992 ? <SidebarNav /> : <MobileNavigation />}
         <Main />
       </div>
     </StoreContext.Provider>

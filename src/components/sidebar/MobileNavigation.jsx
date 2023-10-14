@@ -7,7 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useWindowSize from "../../common/windowResize";
 import Menu from "../../utils/menu.json";
 
-const MobileNavigationPortal = () => {
+const MobileNavigation = () => {
   const { isOpen, setIsOpen, sidebarRef } = useContext(StoreContext);
   const navigate = useNavigate();
   const window = useWindowSize();
@@ -26,20 +26,12 @@ const MobileNavigationPortal = () => {
   const closeModal = () => {
     setIsOpen(false);
   };
-
-  const portalRoot = document.getElementById("portal-root");
-
-  if (!portalRoot) {
-    return null; // Return null if the portal container is not found
-  }
-
-  return ReactDOM.createPortal(
+  
+  return (
     <React.Fragment>
       <aside
         ref={sidebarRef}
-        className={`${styles.mobileSidebar} ${
-          isOpen && styles.isOpen
-        }`}
+        className={`${styles.mobileSidebar} ${isOpen && styles.isOpen}`}
       >
         <div className={styles.brand}>
           <Link to={"/"}>
@@ -84,9 +76,8 @@ const MobileNavigationPortal = () => {
         className={`${styles.sidebarOverlay} ${isOpen ? styles.isOpen : ""}`}
         onClick={closeModal}
       />
-    </React.Fragment>,
-    portalRoot
+    </React.Fragment>
   );
 };
 
-export default MobileNavigationPortal;
+export default MobileNavigation;

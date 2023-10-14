@@ -3,6 +3,7 @@
     grid-template-columns: auto 1fr;
     height: 100vh;
     overflow: hidden;
+    z-index: 20;
     @media (max-width:992px) {
         grid-template-columns: 1fr;
     }

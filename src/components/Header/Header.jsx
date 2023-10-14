@@ -3,6 +3,7 @@ import { StoreContext } from "../Layout";
 import styles from "./styleheader.module.scss";
 import useWindowSize from "../../common/windowResize";
 import { useDetectOutsideClick } from "../../common/useOutsideClick/useDetectOutsideClick";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dropRef = useRef(null);
@@ -59,23 +60,21 @@ const Header = () => {
                   aria-labelledby="dropdownUserAvatarButton"
                 >
                   <li className={styles.item}>
-                    <a href="#">Dashboard</a>
+                    <Link to="#">Dashboard</Link>
                   </li>
                   <li className={styles.item}>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 hover-bg-gray-100 dark-hover-bg-gray-600 dark-hover-text-white"
+                    <Link
+                      to="#"
                     >
                       Settings
-                    </a>
+                    </Link>
                   </li>
                   <li className={styles.item}>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 hover-bg-gray-100 dark-hover-bg-gray-600 dark-hover-text-white"
+                    <Link
+                      to="#"
                     >
                       Sign out
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

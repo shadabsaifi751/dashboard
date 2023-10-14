@@ -4,12 +4,13 @@ import Layout from "./components/Layout";
 import Home from "./dashboard/Home";
 import NotFound from "./dashboard/NotFound";
 import ComingSoon from "./dashboard/ComingSoon";
+import HomePage from "./components/HomePage/HomePage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/product" element={<ComingSoon />} />
         <Route path="/income" element={<ComingSoon />} />
         <Route path="/promote" element={<ComingSoon />} />

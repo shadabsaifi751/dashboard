@@ -46,6 +46,9 @@
                 background-color: $success-light;
                 border-radius: 50%;
 
+                @media (max-width: 580px) {
+                    padding: 16px;
+                }
                 &.orders {
                     background-color: $purple-light;
                 }
@@ -66,6 +69,11 @@
                     background-color: $success;
                     -webkit-mask: url("../../assets/icons/dashboard-icons/bank.svg") no-repeat center;
                     mask-image: url("../../assets/icons/dashboard-icons/bank.svg") no-repeat center;
+
+                    @media (max-width: 580px) {
+                        height: 25px;
+                        width: 25px;
+                    }
                 }
                 .orders {
                     background-color: $purple;

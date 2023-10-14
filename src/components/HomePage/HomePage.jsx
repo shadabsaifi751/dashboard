@@ -9,7 +9,7 @@ const HomePage = () => {
   const isMobile = windowSize.width <= 992;
 
   return (
-    <div className={` mt-20 ${styles.home_wrapper}`}>
+    <main className={` mt-20 ${styles.home_wrapper}`}>
       {isMobile && <h2 className="mb-30">Hello, Shadab Saifi👋</h2>}
       <div className={styles.cards_wrap}>
         <div className={styles.card}>
@@ -70,7 +70,7 @@ const HomePage = () => {
         <BarChart />
         <PieChart />
       </div>
-    </div>
+    </main>
   );
 };
 
