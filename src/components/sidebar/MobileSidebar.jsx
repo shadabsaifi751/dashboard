@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import Sidebar from "./Sidebar";
 import styles from "./sidebar.module.scss";
 import { StoreContext } from "../Layout";
 import { Link, useLocation, useNavigate } from "react-router-dom";

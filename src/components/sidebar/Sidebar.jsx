@@ -3,7 +3,6 @@ import styles from "./sidebar.module.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Menu from "../../utils/menu.json";
 import useWindowSize from "../../common/windowResize";
-import MobileSidebar from "./mobileSidebar";
 import { StoreContext } from "../Layout";
 
 const Sidebar = () => {
