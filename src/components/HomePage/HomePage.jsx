@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "./homepage.module.scss";
-import data from "../../utils/overview.json";
+import styles from "./dashboard.module.scss";
 import useWindowSize from "../../common/windowResize";
 import BarChart from "./Chart/BarChart";
 import PieChart from "./Chart/PaiChart";
