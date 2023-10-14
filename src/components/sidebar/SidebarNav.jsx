@@ -27,9 +27,7 @@ const SidebarNav = () => {
 
   return (
     <aside
-      className={`${styles.sidebar} ${isMobile && styles.isMobile} ${
-        isOpen && styles.isOpen
-      }`}
+      className={`${styles.sidebar}`}
     >
       <div className={styles.brand}>
         <Link to={"/"}>

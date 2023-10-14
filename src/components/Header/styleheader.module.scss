@@ -1,6 +1,5 @@
 @import "../../globalStyles/theme";
 
-
 .header {
     padding: 12px 36px;
     display: flex;
@@ -9,14 +8,14 @@
     justify-content: space-between;
     z-index: 99;
 
-    @media (max-width : 992px) {
+    @media (max-width: 992px) {
         position: sticky;
         top: 0;
         left: 0;
         background-color: $primary;
         padding: 12px 24px;
     }
-    @media (max-width : 320px) {
+    @media (max-width: 320px) {
         padding: 12px 14px;
     }
     .search_input {
@@ -43,8 +42,88 @@
         }
     }
 
-    .humbergar {
-        background-color: transparent;
-        border: none;
+    .user_profile_wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .user_wrap {
+            position: relative;
+            .userprofile {
+                border-radius: 8rem;
+                height: 40px;
+                width: 40px;
+                border: 2px solid $primary-text;
+                overflow: hidden;
+                img {
+                    border-radius: 8rem;
+                    height: auto;
+                    max-width: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+            .dropdown {
+                position: absolute;
+                top: 55px;
+                right: 0;
+                background: white;
+                border-radius: 6px;
+                box-shadow:
+                    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+                    0 1px 2px -1px rgba(0, 0, 0, 0.1);
+
+                .drop_body {
+                    padding: 10px 20px;
+                    h4 {
+                        color: $primary-text;
+                        font-weight: 400;
+                        font-size: 0.875rem;
+                        line-height: 1.25rem;
+                    }
+                    h5{
+                        font-weight: 500;
+                        font-size: 0.775rem;
+                        line-height: 1.25rem;
+                        cursor: pointer;
+                    }
+                }
+                .drop_wrap{
+                    .item{
+                        padding: 6px 20px;
+                        transition: background .2s linear;
+                        cursor: pointer;
+                        &:hover{
+                            background: $primary-text;
+                            a{
+                                color: $white;
+                            }
+                        }
+                        a{
+                            font-size: 14px;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+        .humbergar {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+
+            .lines {
+                height: 2px;
+                width: 30px;
+                border-radius: 4px;
+                background-color: $white;
+
+                &:not(:first-child) {
+                    width: 22px;
+                }
+            }
+        }
     }
 }

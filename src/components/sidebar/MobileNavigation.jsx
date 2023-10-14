@@ -1,40 +1,43 @@
+// MobileNavigationPortal.js
 import React, { useContext, useState } from "react";
-import styles from "./sidebar.module.scss";
+import ReactDOM from "react-dom";
+import styles from "./mobileStyles.module.scss";
 import { StoreContext } from "../Layout";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useWindowSize from "../../common/windowResize";
 import Menu from "../../utils/menu.json";
 
-const MobileNavigation = () => {
-  const { isOpen, setIsOpen } = useContext(StoreContext);
+const MobileNavigationPortal = () => {
+  const { isOpen, setIsOpen, sidebarRef } = useContext(StoreContext);
   const navigate = useNavigate();
   const window = useWindowSize();
   const location = useLocation();
   const activePage = Menu.find((item) => item.route === location.pathname);
   const activePageId = activePage ? activePage.route : "";
   const [isActive, setIsActive] = useState(activePageId);
-  const [isExpent, setIsExpend] = useState(1);
+  const [isExpand, setIsExpand] = useState(1);
 
   const menuHandle = (e, val) => {
-    e.stopPropagation();
     setIsActive(val);
-    setIsExpend(isExpent === val ? 1 : val);
+    setIsExpand(isExpand === val ? 1 : val);
     navigate(val);
   };
 
-  const outSidehandle = () => {
+  const closeModal = () => {
     setIsOpen(false);
   };
-  // console.log(isExpent, "location");
-  const isMobile = window.width <= 992;
 
-  return (
-    <div
-      className={`${styles.sidebarOverlay} ${isOpen ? styles.isOpen : ""}`}
-      onClick={outSidehandle}
-    >
+  const portalRoot = document.getElementById("portal-root");
+
+  if (!portalRoot) {
+    return null; // Return null if the portal container is not found
+  }
+
+  return ReactDOM.createPortal(
+    <React.Fragment>
       <aside
-        className={`${styles.sidebar} ${isMobile && styles.isMobile} ${
+        ref={sidebarRef}
+        className={`${styles.mobileSidebar} ${
           isOpen && styles.isOpen
         }`}
       >
@@ -61,7 +64,7 @@ const MobileNavigation = () => {
                   <i className={styles.arrowIcon}></i>
                 )}
               </li>
-              {isExpent === item.route && item.subMenu.length > 0 ? (
+              {isExpand === item.route && item.subMenu.length > 0 ? (
                 <ul className={styles.subMenu}>
                   {item.subMenu.map((subItem, subKey) => (
                     <Link to="#" key={subKey} className={styles.subList}>
@@ -77,8 +80,13 @@ const MobileNavigation = () => {
           ))}
         </ul>
       </aside>
-    </div>
+      <div
+        className={`${styles.sidebarOverlay} ${isOpen ? styles.isOpen : ""}`}
+        onClick={closeModal}
+      />
+    </React.Fragment>,
+    portalRoot
   );
 };
 
-export default MobileNavigation;
+export default MobileNavigationPortal;

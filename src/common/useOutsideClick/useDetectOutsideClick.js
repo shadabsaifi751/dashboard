@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
  */
 export const useDetectOutsideClick = (el, initialState) => {
   const [isActive, setIsActive] = useState(initialState);
-  const elRef = useRef(null);
+  const elRef = el;
 
   useEffect(() => {
     const onClick = e => {

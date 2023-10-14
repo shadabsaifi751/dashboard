@@ -1,7 +1,7 @@
 import React from "react";
-import MobileNavigation from "./MobileNavigation";
 import useWindowSize from "../../common/windowResize";
 import SidebarNav from "./SidebarNav";
+import MobileNavigation from "./MobileNavigation";
 
 const Asidebar = () => {
   const windowSize = useWindowSize();
