@@ -3,6 +3,8 @@ import { StoreContext } from "../Layout";
 import styles from "./header.module.scss";
 import useWindowSize from "../../common/windowResize";
 import Humbarger from "../../assets/icons/dashboard-icons/humbergar.svg";
+
+
 const Header = () => {
   const { isOpen, setIsOpen } = useContext(StoreContext);
   const windowSize = useWindowSize();
