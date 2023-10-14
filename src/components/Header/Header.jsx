@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../Layout";
-import styles from "./header.module.scss";
+import styles from "./styleheader.module.scss";
 import useWindowSize from "../../common/windowResize";
 import Humbarger from "../../assets/icons/dashboard-icons/humbergar.svg";
 
