@@ -15,6 +15,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 30px;
+        margin-bottom: 30px;
         @media (max-width: 992px) {
             gap: 28px;
         }
@@ -78,14 +79,14 @@
                 .title {
                     font-size: 12px;
                     color: $primary-text;
-                    margin-bottom: 4px;
+                    margin-bottom: 2px;
                 }
                 .price {
-                    font-size: 18px;
-                    margin-bottom: 5px;                
+                    font-size: 16px;
+                    margin-bottom: 2px;                
                 }
                 .dicription {
-                    font-size: 12px;
+                    font-size: 11px;
                     font-weight: 600;
                     .lavel {
                         color: $success;
@@ -95,6 +96,17 @@
                     }
                 }
             }
+        }
+    }
+
+    .chart_wrapper{
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        height: 100%;
+        gap: 30px;
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+            gap: 28px;
         }
     }
 }

@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./HomePage.module.scss";
 import data from "../../utils/overview.json";
 import useWindowSize from "../../common/windowResize";
+import BarChart from "./Chart/BarChart";
+import PieChart from "./Chart/PaiChart";
 
 const HomePage = () => {
   const windowSize = useWindowSize();
@@ -17,11 +19,9 @@ const HomePage = () => {
           </div>
           <div className={styles.card_body}>
             <p className={styles.title}>Earning</p>
-            <h4 className={styles.price}>$198K</h4>
+            <h4 className={styles.price}>$98K</h4>
             <p className={styles.dicription}>
-              <span className={styles.lavel}>
-                {/* {item.up === "up" ? &#8593; : "&#8595;"}  */}↑ 37.8%
-              </span>
+              <span className={styles.lavel}>↑ 37.8%</span>
               &nbsp;this month
             </p>
           </div>
@@ -67,7 +67,10 @@ const HomePage = () => {
         </div>
       </div>
 
-      
+      <div className={styles.chart_wrapper}>
+        <BarChart />
+        <PieChart />
+      </div>
     </div>
   );
 };

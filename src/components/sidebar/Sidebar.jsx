@@ -23,7 +23,7 @@ const Sidebar = () => {
     navigate(val);
   };
 
-  console.log(isExpent, "location");
+  // console.log(isExpent, "location");
   const isMobile = window.width <= 992;
 
   return (
