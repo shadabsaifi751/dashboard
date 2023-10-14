@@ -2,9 +2,8 @@ import React, { createContext, useRef, useState } from "react";
 import styles from "./main.module.scss";
 import useWindowSize from "../../common/windowResize";
 import Main from "../Main/Main";
-import SidebarNav from "../Sidebar/SidebarNav";
-import MobileNavigation from "../Sidebar/MobileNavigation";
-// import MobileSidebar from '../sidebar/MobileSidebar';
+import MobileNavigation from "../sidebar/MobileNavigation";
+import SidebarNav from "../sidebar/SidebarNav";
 
 export const StoreContext = createContext(null);
 
