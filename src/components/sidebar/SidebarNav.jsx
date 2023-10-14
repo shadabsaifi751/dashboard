@@ -5,7 +5,7 @@ import Menu from "../../utils/menu.json";
 import useWindowSize from "../../common/windowResize";
 import { StoreContext } from "../Layout";
 
-const Sidebar = () => {
+const SidebarNav = () => {
   const { isOpen } = useContext(StoreContext);
   const navigate = useNavigate();
   const window = useWindowSize();
@@ -15,7 +15,7 @@ const Sidebar = () => {
   const [isActive, setIsActive] = useState(activePageId);
   const [isExpent, setIsExpend] = useState(1);
 
-  const menuHandle = (e,val) => {
+  const menuHandle = (e, val) => {
     e.stopPropagation();
     setIsActive(val);
     setIsExpend(isExpent === val ? 1 : val);
@@ -38,37 +38,46 @@ const Sidebar = () => {
       </div>
       <ul className={styles.menu_wrap}>
         {Menu.map((item, key) => (
-          <>
+          <React.Fragment key={key}>
             <li
-              key={key}
               className={`${styles.menu_list} ${
                 isActive === item.route && styles.active
               }`}
-              onClick={(e) => menuHandle(e,item.route)}
+              onClick={(e) => menuHandle(e, item.route)}
             >
               <span className={styles.MainMenu_Item}>
                 <i className={styles[item.iconName]}></i>
                 {item.title}
               </span>
-              {item.subMenu.length > 0 && <i className={styles.arrowIcon}></i>}
+              {item.subMenu.length > 0 && (
+                <i
+                  className={`${
+                    isExpent === item.route
+                      ? styles.arrowDown
+                      : styles.arrowIcon
+                  }`}
+                ></i>
+              )}
             </li>
             {isExpent === item.route && item.subMenu.length > 0 ? (
               <ul className={styles.subMenu}>
                 {item.subMenu.map((subItem, subKey) => (
-                  <Link to="#" key={subKey} className={styles.subList}>
-                    {" "}
-                    {subItem.subMenu}
-                  </Link>
+                  <React.Fragment key={subKey}>
+                    <Link to="#" className={styles.subList}>
+                      {" "}
+                      {subItem.subMenu}
+                    </Link>
+                  </React.Fragment>
                 ))}
               </ul>
             ) : (
               ""
             )}
-          </>
+          </React.Fragment>
         ))}
       </ul>
     </aside>
   );
 };
 
-export default Sidebar;
+export default SidebarNav;

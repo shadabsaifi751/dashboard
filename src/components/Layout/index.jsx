@@ -4,7 +4,7 @@ import React, {
 } from "react";
 import styles from "./main.module.scss";
 import useWindowSize from "../../common/windowResize";
-import Main from "../Main";
+import Main from "../Main/Main";
 import Asidebar from "../sidebar";
 // import MobileSidebar from '../sidebar/MobileSidebar';
 

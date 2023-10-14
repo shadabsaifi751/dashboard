@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useWindowSize from "../../common/windowResize";
 import Menu from "../../utils/menu.json";
 
-const MobileSidebar = () => {
+const MobileNavigation = () => {
   const { isOpen, setIsOpen } = useContext(StoreContext);
   const navigate = useNavigate();
   const window = useWindowSize();
@@ -45,7 +45,7 @@ const MobileSidebar = () => {
         </div>
         <ul className={styles.menu_wrap}>
           {Menu.map((item, key) => (
-            <>
+            <React.Fragment key={key}>
               <li
                 key={key}
                 className={`${styles.menu_list} ${
@@ -73,7 +73,7 @@ const MobileSidebar = () => {
               ) : (
                 ""
               )}
-            </>
+            </React.Fragment>
           ))}
         </ul>
       </aside>
@@ -81,4 +81,4 @@ const MobileSidebar = () => {
   );
 };
 
-export default MobileSidebar;
+export default MobileNavigation;

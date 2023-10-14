@@ -74,7 +74,8 @@
                 color: $primary-text;
                 align-items: center;
             }
-            .arrowIcon {
+            .arrowIcon,
+            .arrowDown {
                 display: block;
                 height: 18px;
                 width: 18px;
@@ -82,6 +83,10 @@
                 background-color: $primary-text;
                 -webkit-mask: url("../../assets/icons/dashboard-icons/angle-small-right.svg") no-repeat center;
                 mask-image: url("../../assets/icons/dashboard-icons/angle-small-right.svg") no-repeat center;
+            }
+            .arrowDown {
+                -webkit-mask: url("../../assets/icons/dashboard-icons/angle-small-down.svg") no-repeat center;
+                mask-image: url("../../assets/icons/dashboard-icons/angle-small-down.svg") no-repeat center;
             }
             &:hover,
             &.active {
@@ -93,10 +98,15 @@
                 .Income,
                 .Promote,
                 .Help,
-                .arrowIcon {
+                .arrowIcon,
+                .arrowDown {
                     background-color: $white;
                 }
                 color: $white;
+
+                .MainMenu_Item {
+                    color: $white;
+                }
             }
             .Dashboard,
             .Product,
