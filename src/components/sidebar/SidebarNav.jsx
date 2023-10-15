@@ -90,7 +90,8 @@ const SidebarNav = () => {
               <h6>Project Manager</h6>
             </div>
           </div>
-          <i className={styles.arrowDown}></i>
+          
+          <i className={`${ isDrop ? styles.arrowUp : styles.arrowDown}`}></i>
         </button>
 
         {isDrop && (

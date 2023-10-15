@@ -149,7 +149,7 @@
             justify-content: space-between;
             background-color: $primary-light;
             border: none;
-            padding: 10px 12px;
+            padding: 8px;
             width: 100%;
             border-radius: 6px;
             cursor: pointer;
@@ -169,21 +169,34 @@
                     border: 2px solid $primary-text;
                     overflow: hidden;
                 }
+                .user_body {
+                    h4 {
+                        color: $primary-text;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 1.25rem;
+                    }
+                    h6 {
+                        font-weight: 500;
+                        font-size: 0.775rem;
+                        line-height: 1.25rem;
+                        cursor: pointer;
+                        color: $white;
+                    }
+                }
             }
-            .user_body {
-                h4 {
-                    color: $primary-text;
-                    font-weight: 400;
-                    font-size: 0.875rem;
-                    line-height: 1.25rem;
-                }
-                h6 {
-                    font-weight: 500;
-                    font-size: 0.775rem;
-                    line-height: 1.25rem;
-                    cursor: pointer;
-                    color: $white;
-                }
+            .arrowDown,.arrowUp {
+                display: block;
+                height: 18px;
+                width: 18px;
+                cursor: pointer;
+                background-color: $primary-text;
+                -webkit-mask: url("../../assets/icons/dashboard-icons/angle-small-down.svg") no-repeat center;
+                mask-image: url("../../assets/icons/dashboard-icons/angle-small-down.svg") no-repeat center;
+            }
+            .arrowUp{
+                -webkit-mask: url("../../assets/icons/dashboard-icons/angle-small-up.svg") no-repeat center;
+                mask-image: url("../../assets/icons/dashboard-icons/angle-small-up.svg") no-repeat center;
             }
         }
         .dropdown {
@@ -204,7 +217,7 @@
                 transition: background 0.2s linear;
                 cursor: pointer;
                 &:hover {
-                    background: $primary-text;
+                    background: $primary-light;
                     a {
                         color: $white;
                     }

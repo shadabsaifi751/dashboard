@@ -100,7 +100,7 @@
                         transition: background .2s linear;
                         cursor: pointer;
                         &:hover{
-                            background: $primary-text;
+                            background: $primary-light;
                             a{
                                 color: $white;
                             }

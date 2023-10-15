@@ -53,7 +53,13 @@ const MobileNavigation = () => {
                   {item.title}
                 </span>
                 {item.subMenu.length > 0 && (
-                  <i className={styles.arrowIcon}></i>
+                  <i
+                  className={`${
+                    isExpand === item.route
+                      ? styles.arrowDown
+                      : styles.arrowIcon
+                  }`}
+                ></i>
                 )}
               </li>
               {isExpand === item.route && item.subMenu.length > 0 ? (
