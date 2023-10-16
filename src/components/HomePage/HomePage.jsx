@@ -3,6 +3,7 @@ import styles from "./dashboard.module.scss";
 import useWindowSize from "../../common/windowResize";
 import BarChart from "./Chart/BarChart";
 import PieChart from "./Chart/PaiChart";
+import ProductList from "./Product/productList";
 
 const HomePage = () => {
   const windowSize = useWindowSize();
@@ -70,6 +71,8 @@ const HomePage = () => {
         <BarChart />
         <PieChart />
       </div>
+
+      <ProductList/>
     </main>
   );
 };
