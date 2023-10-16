@@ -18,7 +18,7 @@ const ProductList = () => {
           </div>
           <div className={styles.search_input}>
             <select id="selectBox" className={styles.form_Select_control}>
-              <option value="select">*select</option>
+              <option value="select">* select</option>
               <option value="Last 10 Days">Last 10 Days</option>
               <option value="Last 20 Days">Last 20 Days</option>
               <option value="Last 30 Days">Last 30 Days</option>
