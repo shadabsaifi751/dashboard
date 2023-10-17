@@ -5,19 +5,74 @@ export default function BarChart() {
   const eChartsOption = {
     title: {
       // title of our chart
-      //   text: "Bar Chart",
+      text: "Overview",
+
+      subtext: "Monthly Earning",
+      color: "#040440",
+      fontSize: 12,
+      fontWeight: "500",
+      top: 2,
+      itemGap: 10,
+      textStyle: {
+        // color: "#040440",
+        fontSize: 18,
+        fontWeight: "500",
+      },
+      subtextStyle: {
+        // color: "#040440",
+        fontSize: 12,
+        fontWeight: "500",
+        padding: [
+          5, // up
+          10, // right
+          30, // down
+          10, // left
+        ],
+      },
     },
-    color: ["#040440"],
+    textStyle: {
+      color: "#040440",
+      fontSize: 12,
+      fontWeight: "500",
+    },
     xAxis: {
-      // name of X Axis
-    //   name: "X Axis",
       type: "category",
-      // Contains the values for XAxis
-      data: ["One", "Two", "Three", "Four", "Five", "Six","Three", "Four", "Five", "Six"],
+      data: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
     },
+    color: [
+      {
+        type: "linear",
+        x: 0,
+        y: 0,
+        x2: 0,
+        y2: 1,
+        colorStops: [
+          {
+            offset: 0,
+            color: "#AD78ED", // color at 0%
+          },
+          {
+            offset: 1,
+            color: "#AD78ED", // color at 100%
+          },
+        ],
+        global: false, // default is false
+      },
+    ],
     yAxis: {
-      // name of Y Axis
-      //   name: "Y Axis",
       type: "value",
     },
     //To enable tooltips
@@ -31,7 +86,28 @@ export default function BarChart() {
     },
 
     series: {
-      data: [401, 300, 600, 400, 950, 650, 800, 900, 1200,1400],
+      barWidth: "70%",
+      barCategoryGap: "20%",
+      barGap:"30%" ,
+      data: [
+        401,
+        300,
+        600,
+        1500,
+        1050,
+        650,
+        {
+          value: 2000,
+          itemStyle: {
+            color: "#5A32EA",
+          },
+        },
+        900,
+        1200,
+        1400,
+        1800,
+        1700,
+      ],
       type: "bar",
     },
   };

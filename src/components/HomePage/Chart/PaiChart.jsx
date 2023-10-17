@@ -10,6 +10,47 @@ const PieChart = () => {
         top: "5%",
         left: "center",
       },
+      color: [
+        {
+          type: 'linear',
+          x: 0,
+          y: 0,
+          x2: 0,
+          y2: 1,
+          colorStops: [{
+              offset: 0, color: '#F52E92' // color at 0%
+          }, {
+              offset: 1, color: '#EF4EA4' // color at 100%
+          }],
+          global: false // default is false
+        },
+        {
+          type: 'linear',
+          x: 0,
+          y: 0,
+          x2: 0,
+          y2: 1,
+          colorStops: [{
+              offset: 0, color: '#AD78ED' // color at 0%
+          }, {
+              offset: 1, color: '#683FEA' // color at 100%
+          }],
+          global: false // default is false
+        },
+        {
+          type: 'linear',
+          x: 0,
+          y: 0,
+          x2: 0,
+          y2: 1,
+          colorStops: [{
+              offset: 0, color: '#F1EFFC' // color at 0%
+          }, {
+              offset: 1, color: '#CDCDCD' // color at 100%
+          }],
+          global: false // default is false
+        }
+      ],
       series: [
         {
           name: "Access From",
@@ -23,7 +64,7 @@ const PieChart = () => {
           emphasis: {
             label: {
               show: true,
-              fontSize: 10,
+              fontSize: 12,
               fontWeight: "bold",
             },
           },
@@ -31,12 +72,11 @@ const PieChart = () => {
             show: false,
           },
           data: [
-            { value: 1048, name: "Search Engine" },
-            { value: 735, name: "Direct" },
-            { value: 580, name: "Email" },
-            { value: 484, name: "Union Ads" },
-            { value: 300, name: "Video Ads" },
+            { value: 1048, name: "65% Total New Customers" },
+            { value: 735, name: "10% Old Customers" },
+            { value: 580, name: "25% Ragular Customers" },
           ],
+          top:"15%"
         },
       ],
     };
@@ -44,11 +84,10 @@ const PieChart = () => {
 
   return (
     <div className={styles.barchar_wrapper}>
-
-        <ReactEChart
-          option={getOption()}
-          style={{ width: "100%", height: "400px" }}
-        />
+      <ReactEChart
+        option={getOption()}
+        style={{ width: "100%", height: "400px" }}
+      />
     </div>
   );
 };
