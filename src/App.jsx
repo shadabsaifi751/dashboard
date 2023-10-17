@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./dashboard/Home";
 import NotFound from "./dashboard/NotFound";
 import ComingSoon from "./dashboard/ComingSoon";
 import HomePage from "./components/HomePage/HomePage";
@@ -17,7 +15,7 @@ function App() {
         <Route path="/help" element={<ComingSoon />} />
         <Route path="/customers" element={<ComingSoon />} />
       </Route>
-      <Route path="*" element={<NotFound />} />
+        <Route path="/*" element={<NotFound />} />
     </Routes>
   );
 }

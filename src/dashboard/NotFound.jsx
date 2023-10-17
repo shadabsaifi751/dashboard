@@ -1,9 +1,10 @@
-import React from 'react'
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
-  )
-}
+    <div className="error-warp">
+      <h2>Page Not Found</h2>
+    </div>
+  );
+};
 
-export default NotFound
+export default NotFound;

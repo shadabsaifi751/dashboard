@@ -1,16 +1,13 @@
 // MobileNavigationPortal.js
 import React, { useContext, useState } from "react";
-import ReactDOM from "react-dom";
 import styles from "./mobileStyles.module.scss";
 import { StoreContext } from "../Layout";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import useWindowSize from "../../common/windowResize";
 import Menu from "../../utils/menu.json";
 
 const MobileNavigation = () => {
   const { isOpen, setIsOpen, sidebarRef } = useContext(StoreContext);
   const navigate = useNavigate();
-  const window = useWindowSize();
   const location = useLocation();
   const activePage = Menu.find((item) => item.route === location.pathname);
   const activePageId = activePage ? activePage.route : "";

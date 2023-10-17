@@ -12,44 +12,59 @@ const PieChart = () => {
       },
       color: [
         {
-          type: 'linear',
+          type: "linear",
           x: 0,
           y: 0,
           x2: 0,
           y2: 1,
-          colorStops: [{
-              offset: 0, color: '#F52E92' // color at 0%
-          }, {
-              offset: 1, color: '#EF4EA4' // color at 100%
-          }],
-          global: false // default is false
+          colorStops: [
+            {
+              offset: 0,
+              color: "#F52E92", // color at 0%
+            },
+            {
+              offset: 1,
+              color: "#EF4EA4", // color at 100%
+            },
+          ],
+          global: false, // default is false
         },
         {
-          type: 'linear',
+          type: "linear",
           x: 0,
           y: 0,
           x2: 0,
           y2: 1,
-          colorStops: [{
-              offset: 0, color: '#AD78ED' // color at 0%
-          }, {
-              offset: 1, color: '#683FEA' // color at 100%
-          }],
-          global: false // default is false
+          colorStops: [
+            {
+              offset: 0,
+              color: "#AD78ED", // color at 0%
+            },
+            {
+              offset: 1,
+              color: "#683FEA", // color at 100%
+            },
+          ],
+          global: false, // default is false
         },
         {
-          type: 'linear',
+          type: "linear",
           x: 0,
           y: 0,
           x2: 0,
           y2: 1,
-          colorStops: [{
-              offset: 0, color: '#F1EFFC' // color at 0%
-          }, {
-              offset: 1, color: '#CDCDCD' // color at 100%
-          }],
-          global: false // default is false
-        }
+          colorStops: [
+            {
+              offset: 0,
+              color: "#F1EFFC", // color at 0%
+            },
+            {
+              offset: 1,
+              color: "#CDCDCD", // color at 100%
+            },
+          ],
+          global: false, // default is false
+        },
       ],
       series: [
         {
@@ -76,7 +91,7 @@ const PieChart = () => {
             { value: 735, name: "10% Old Customers" },
             { value: 580, name: "25% Ragular Customers" },
           ],
-          top:"15%"
+          top: "15%",
         },
       ],
     };

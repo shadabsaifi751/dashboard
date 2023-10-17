@@ -1,12 +1,5 @@
-import React from "react";
-
-const comingSoon = {
-    "display":"flex",
-    "justifyContent":"center"
-};
-
 const ComingSoon = () => {
-  return <div style={{display:"flex",justifyContent:"center",marginTop:"40px"}}>Coming Soon...</div>;
+  return <div style={{display:"flex",justifyContent:"center",marginTop:"50px"}}>Coming Soon...</div>;
 };
 
 export default ComingSoon;

@@ -1,4 +1,4 @@
-import React, { createContext, useRef, useState } from "react";
+import { createContext, useRef, useState } from "react";
 import styles from "./main.module.scss";
 import useWindowSize from "../../common/windowResize";
 import Main from "../Main/Main";

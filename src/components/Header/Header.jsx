@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import { useContext, useRef } from "react";
 import { StoreContext } from "../Layout";
 import styles from "./styleheader.module.scss";
 import useWindowSize from "../../common/windowResize";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const dropRef = useRef(null);
-  const {isOpen, setIsOpen } = useContext(StoreContext);
+  const { setIsOpen } = useContext(StoreContext);
   const [isDropdown, setIsDropdown] = useDetectOutsideClick(dropRef, false);
   const windowSize = useWindowSize();
   const isMobile = windowSize.width <= 992;
@@ -63,18 +63,10 @@ const Header = () => {
                     <Link to="#">Dashboard</Link>
                   </li>
                   <li className={styles.item}>
-                    <Link
-                      to="#"
-                    >
-                      Settings
-                    </Link>
+                    <Link to="#">Settings</Link>
                   </li>
                   <li className={styles.item}>
-                    <Link
-                      to="#"
-                    >
-                      Sign out
-                    </Link>
+                    <Link to="#">Sign out</Link>
                   </li>
                 </ul>
               </div>
