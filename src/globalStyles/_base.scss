@@ -238,3 +238,14 @@ $marginTop: (
         margin-top: #{$val};
     }
 }
+
+.error-warp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    h2{
+        font-weight: 500;
+    }
+}

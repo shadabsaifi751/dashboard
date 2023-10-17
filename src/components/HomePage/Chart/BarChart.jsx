@@ -6,7 +6,6 @@ export default function BarChart() {
     title: {
       // title of our chart
       text: "Overview",
-
       subtext: "Monthly Earning",
       color: "#040440",
       fontSize: 12,
@@ -14,12 +13,10 @@ export default function BarChart() {
       top: 2,
       itemGap: 10,
       textStyle: {
-        // color: "#040440",
         fontSize: 18,
         fontWeight: "500",
       },
       subtextStyle: {
-        // color: "#040440",
         fontSize: 12,
         fontWeight: "500",
         padding: [
@@ -78,17 +75,10 @@ export default function BarChart() {
     //To enable tooltips
     tooltip: {},
     // To enable toolbox
-    toolbox: {
-      feature: {
-        // displays a options to direct save chart as a image
-        // saveAsImage: {},
-      },
-    },
-
     series: {
       barWidth: "70%",
       barCategoryGap: "20%",
-      barGap:"30%" ,
+      barGap: "30%",
       data: [
         401,
         300,

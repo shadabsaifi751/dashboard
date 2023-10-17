@@ -2,15 +2,13 @@ import React, { useContext, useRef, useState } from "react";
 import styles from "./sidebar.module.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Menu from "../../utils/menu.json";
-import useWindowSize from "../../common/windowResize";
 import { StoreContext } from "../Layout";
 import { useDetectOutsideClick } from "../../common/useOutsideClick/useDetectOutsideClick";
 
 const SidebarNav = () => {
-  const { isOpen, setIsOpen } = useContext(StoreContext);
+  const { setIsOpen } = useContext(StoreContext);
   const navigate = useNavigate();
   const dropRef = useRef();
-  const window = useWindowSize();
   const location = useLocation();
   const activePage = Menu.find((item) => item.route === location.pathname);
   const activePageId = activePage ? activePage.route : "";
@@ -90,8 +88,8 @@ const SidebarNav = () => {
               <h6>Project Manager</h6>
             </div>
           </div>
-          
-          <i className={`${ isDrop ? styles.arrowUp : styles.arrowDown}`}></i>
+
+          <i className={`${isDrop ? styles.arrowUp : styles.arrowDown}`}></i>
         </button>
 
         {isDrop && (
